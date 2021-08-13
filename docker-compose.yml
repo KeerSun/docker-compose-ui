@@ -14,6 +14,8 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             #- /home/user/docker-compose-ui/demo-projects:/home/user/docker-compose-ui/demo-projects
     web_console:
+        labels:
+            shipyard.route: '/'
         image: bitbull/docker-exec-web-console
         environment:
         - 'CONTEXT_PATH=/web-console/'
